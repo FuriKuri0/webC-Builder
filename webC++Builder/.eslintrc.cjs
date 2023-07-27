@@ -29,6 +29,12 @@ module.exports = {
         ignores: ['index']
       }
     ],
-    'vue/no-setup-props-destructure': ['off']
+    'vue/no-setup-props-destructure': ['off'],
+    'no-undef': 'error'
+  },
+  globals: {
+    ElMessage: 'readonly',
+    ElMessageBox: 'readonly',
+    ElLoading: 'readonly'
   }
 }

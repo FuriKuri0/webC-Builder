@@ -1,47 +1,31 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<!--  -->
+
+<script setup>
+import RightSlider from './components/RightSlider/index.vue'
+import Main from './components/Main/index.vue'
 </script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="common-layout">
+    <el-container>
+      <el-header className="Header">Web编译器 </el-header>
+      <el-container>
+        <el-main><Main></Main></el-main>
+        <el-aside className="Right">
+          <RightSlider></RightSlider>
+        </el-aside>
+      </el-container>
+    </el-container>
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
+<style lang="scss" scoped>
+.Header {
+  width: 100vw;
+  height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.Right {
+  height: calc(100vh - 30px);
+  padding: 0 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 </style>
