@@ -1,19 +1,14 @@
 import axios from 'axios'
-import { useUserStore } from '@/stores'
 import { ElMessage } from 'element-plus'
 // 添加实例
 const instance = axios.create({
-  baseURL: 'https://some-domain.com/api/',
+  baseURL: 'http://39.98.41.126:31126/',
   timeout: 10000
 })
 // 添加请求拦截器
 instance.interceptors.request.use(
   function (config) {
     // 在发送请求之前做些什么
-    const useStore = useUserStore()
-    if (useStore.token) {
-      config.headers.Authorization = useStore.token
-    }
     return config
   },
   function (error) {
