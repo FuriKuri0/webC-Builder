@@ -3,11 +3,12 @@
 <script setup>
 import RightSlider from './components/RightSlider/index.vue'
 import Main from './components/Main/index.vue'
+import Header from './components/Header/index.vue'
 </script>
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header className="Header">Web编译器 </el-header>
+      <el-header className="Header"><Header></Header></el-header>
       <el-container>
         <el-main className="Main"><Main></Main></el-main>
         <el-aside className="Right">
@@ -24,7 +25,7 @@ import Main from './components/Main/index.vue'
   overflow: hidden;
 }
 .Main {
-  width: calc(100vw - 300px);
+  width: calc(100vw - 270px);
   height: calc(100vh - 30px);
   padding-top: 10px;
 }
@@ -35,8 +36,7 @@ import Main from './components/Main/index.vue'
 }
 .Right {
   height: calc(100vh - 30px);
-  width: 300px;
-  padding: 0 30px;
+  width: 320px;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 </style>

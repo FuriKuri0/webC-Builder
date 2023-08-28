@@ -11,6 +11,8 @@ declare module 'vue' {
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    Header: typeof import('./src/components/Header/index.vue')['default']
     Main: typeof import('./src/components/Main/index.vue')['default']
     RightSlider: typeof import('./src/components/RightSlider/index.vue')['default']
   }

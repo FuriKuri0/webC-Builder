@@ -1,6 +1,6 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
-//用户模块 token setCode
+//代码模块  setCode
 export const useCodeStore = defineStore(
   'code',
   () => {
@@ -18,7 +18,7 @@ export const useCodeStore = defineStore(
     const removeName = () => {
       name.value = ''
     }
-    return { code,name, setCode,setName, removeCode,removeName }
+    return { code, name, setCode, setName, removeCode, removeName }
   },
   {
     persist: true
